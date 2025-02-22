@@ -1,3 +1,4 @@
+// Updated popup script with bookmark management and filtering features
 document.addEventListener('DOMContentLoaded', function() {
     const keywordInput = document.getElementById('keyword-filter');
     const sortSelect = document.getElementById('sort-type');
