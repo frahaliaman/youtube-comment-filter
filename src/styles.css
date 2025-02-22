@@ -1,0 +1,24 @@
+.yt-comment-filter-panel {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 16px 0;
+    padding: 16px;
+  }
+  
+  .comment-highlight {
+    border-left: 4px solid #065fd4;
+    padding-left: 12px;
+  }
+  
+  .comment-bookmarked {
+    background-color: #ffd70020;
+  }
+  
+  .comment-spam {
+    opacity: 0.5;
+  }
+  
+  .hidden {
+    display: none !important;
+  }

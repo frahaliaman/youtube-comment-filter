@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Comment Filter</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin: 8px 0;
+        }
+        #status {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        .bookmarks-section {
+            margin-top: 15px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .bookmark-item {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            margin: 8px 0;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .bookmark-author {
+            font-weight: bold;
+            color: #030303;
+            margin-bottom: 4px;
+        }
+        .bookmark-text {
+            color: #606060;
+            margin: 8px 0;
+            font-size: 0.9em;
+        }
+        .bookmark-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .video-link {
+            color: #065fd4;
+            text-decoration: none;
+            padding: 3px 8px;
+            border-radius: 3px;
+            background-color: #e6f0ff;
+            font-size: 0.9em;
+        }
+        .video-link:hover {
+            background-color: #d1e3ff;
+            text-decoration: underline;
+        }
+        .bookmark-time {
+            color: #666;
+            font-size: 0.8em;
+        }
+        .remove-bookmark {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+        .remove-bookmark:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <h2>YouTube Comment Filter</h2>
+    
+    <div class="filter-option">
+        <input type="text" id="keyword-filter" placeholder="Filter by keyword">
+    </div>
+
+    <div class="filter-option">
+        <select id="sort-type">
+            <option value="recent">Most Recent</option>
+            <option value="engagement">Most Engagement</option>
+        </select>
+    </div>
+
+    <div class="checkbox-option">
+        <input type="checkbox" id="high-engagement">
+        <label for="high-engagement">Show High Engagement Only</label>
+    </div>
+
+    <div class="checkbox-option">
+        <input type="checkbox" id="hide-spam">
+        <label for="hide-spam">Hide Potential Spam</label>
+    </div>
+
+    <div id="status"></div>
+
+    <div class="bookmarks-section">
+        <h3>Bookmarked Comments</h3>
+        <div id="bookmarks-list"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

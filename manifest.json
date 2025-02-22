@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Comment Assistant",
+    "version": "1.0",
+    "description": "Filter YouTube comments and save bookmarks",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "*://*.youtube.com/*",
+        "tabs"
+    ],
+    "content_scripts": [{
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["src/content.js"]
+    }],
+    "browser_action": {
+        "default_popup": "src/popup.html"
+    }
+}
