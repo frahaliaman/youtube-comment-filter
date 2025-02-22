@@ -1,3 +1,4 @@
+// Updated version with sorting and bookmark features
 console.log('YouTube Comment Filter loaded');
 
 function filterComments(options) {
